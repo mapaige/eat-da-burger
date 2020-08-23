@@ -12,11 +12,38 @@ var orm = {
     })
   },
 
-    insertOne : function(whatToSelect, table, orderCol){
-      var dbQuery ="INSERT INTO" + table + col
+    insertOne : function(table, cols, vals, cb){
+      var dbQuery ="INSERT INTO " + table  + "(" +
+    cols.toString() + ")" + "VALUES (" + printQuestionMarks(vals.length) + ")";
+       
+    console.log (dbQuery);
+    connection.query(dbQuery,vals, function(err,res){
+    if (err) {
+      throw err;
     }
 
+    cb(res);
+  });
+
 }
+
+  updateOne :function(table, objcolVals, condition, cd){
+    var dbQuery = "UPDATE" + table + "SET" + objToSql(objColVals) + "WHERE " + condition;
+
+    console.log (dbQuery);
+    connection.query(dbQuery,vals, function(err,res){
+    if (err) {
+      throw err;
+    }
+
+    cb(res);
+  });
+
+  }
+};
+
+
+   
 
 module.exports = orm
 
