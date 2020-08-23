@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <ul>
+        {{#each burgerData }}
+              {{#unless devoured}}
+                <li>
+                  <p>{{burger_name}} <button class="devouredBtn"> devoured</button></p>
+                </li>
+                {{/unless}}
+       {{/each}}
+      </ul>
+     
+    </div>
+    <div class="col-sm-6">
+      <ul>
+        {{#each burgerData }}
+              {{#if devoured}}
+                <li>
+                  <p>{{burger_name}} </p>
+                </li>
+                {{/if}}
+       {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+       <form action="">
+         <input type="text" name="burger_name">
+         <button id="addBurger">Add Burger</button>
+       </form>
+    </div>
+  </div>
+</div>
