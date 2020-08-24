@@ -1,6 +1,17 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
-var orm = {
+
+function printQuestionMarks(num) {
+  var arr = [];
+
+  for(var i = 0; i < num; i++) {
+    arr.push("?");
+    }
+    return arr.toString();
+    
+}
+
+var orm = 
   selectAll: function(table,cbModel){
     var dbQuery = "SELECT * FROM " + table 
     connection.query(dbQuery, function(err,res){
