@@ -6,4 +6,13 @@ router.get("/", function(req,res){
       })
 })
 
+router.put("/",function(req,res){
+  var condition = "id = " + req.params.id;
+  
+  console.log("condition", condition);
+
+  burger.updateOne({
+    
+  })
+})
 module.exports = router

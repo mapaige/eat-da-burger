@@ -25,26 +25,26 @@ var orm = {
     cb(res);
   });
 
-}
+},
 
-  updateOne :function(table, objcolVals, condition, cd){
-    var dbQuery = "UPDATE" + table + "SET" + objToSql(objColVals) + "WHERE " + condition;
+   updateOne: function (table, objcolVals, condition, cbModel){
+   var dbQuery = "UPDATE" + table + "SET" + objToSql(objColVals) + "WHERE " + condition;
 
     console.log (dbQuery);
-    connection.query(dbQuery,vals, function(err,res){
+   connection.query(dbQuery,vals, function(err,res){
     if (err) {
       throw err;
-    }
+     }
 
-    cb(res);
-  });
+     cb(res);
+ });
 
-  }
-};
+   }
+
+  };
 
 
    
-
 module.exports = orm
 
-      
+    
