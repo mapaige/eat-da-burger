@@ -33,6 +33,5 @@ router.put("/api/cats/:id",function(req,res){
    
   });
 
-  router.
-})
-module.exports = router
+  
+module.exports = router;
