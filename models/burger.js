@@ -12,12 +12,12 @@ selectAll:function(cbController){
      cbController(result);
    });
  },
-};
 
-updateOne: function(objColVals,condtion,cbController) {
+updateOne: function(objColVals,condition,cbController) {
   orm.updateOne ("burgers", objColVals, condition, function(res){
     cbController(result);
   });
+}
 
 };
-module.exports= burger
+module.exports= burger;

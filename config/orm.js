@@ -25,17 +25,19 @@ function objToSql(ob) {
    arr.push(key + "=" + value);
   }
 }
+  return arr.toString();
+}
 
 var orm = {
   selectAll: function(table,cbModel){
-    var dbQuery = "SELECT * FROM " + table 
+    var dbQuery = "SELECT * FROM " + table + ";";
     connection.query(dbQuery, function(err,res){
       if (err) {
         throw err;
       }
 
       cbModel(res);
-    })
+    });
   },
 
     insertOne : function(table, cols, vals, cb){
@@ -63,14 +65,10 @@ var orm = {
      }
 
      cb(res);
- });
-
+    });
    }
-
-  };
-
+};
 
    
-module.exports = orm
+module.exports = orm;
 
-    

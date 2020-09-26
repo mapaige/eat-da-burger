@@ -1,0 +1,11 @@
+.img {
+  background: url(.\images\eat-da-burger.jpg) no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+  
+

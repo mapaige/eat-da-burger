@@ -1,36 +1,42 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <ul>
-        {{#each burgerData }}
-              {{#unless devoured}}
-                <li>
-                  <p>{{burger_name}} <button class="devouredBtn"> devoured</button></p>
-                </li>
-                {{/unless}}
-       {{/each}}
-      </ul>
-     
+<div class="container" >
+  <div class="row" class="absolute" id="burgers" class="col-3 col-md-3 col-sm-12">
+    <div class=" col-4 col-md-4 col-sm-12" id="addburger">
+      <form action="">
+        <input type="text" name="burger_name">
+        <button id="addBurger"  data-id="{{id}}" data>Add Burger</button>
+      </form>
     </div>
-    <div class="col-sm-6">
+  </div>
+
+
+  <div class="row" id="burgerDevoured" class="col-3 col-md-3 col-sm-12">
+    <div class="col-12 col-md-12 col-sm-6" id="burgerDevoured">
       <ul>
         {{#each burgerData }}
-              {{#if devoured}}
-                <li>
-                  <p>{{burger_name}} </p>
-                </li>
-                {{/if}}
-       {{/each}}
+        {{#unless devoured}}
+        <li>
+          <p>{{burger_name}} <button class="devouredBtn"> devoured</button></p>
+        </li>
+        {{/unless}}
+        {{/each}}
       </ul>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-sm-6">
-       <form action="">
-         <input type="text" name="burger_name">
-         <button id="addBurger">Add Burger</button>
-       </form>
-    </div>
+
+  <div class="row" class="col-3 col-md-3 col-sm-12">
+    <div class="col-12 col-md-12 col-sm-6">
+      <ul>
+        {{#each burgerData }}
+        {{#if devoured}}
+        <li>
+          <p>{{burger_name}} </p>
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div
   </div>
+
+
 </div>
