@@ -4,8 +4,16 @@
   background-size: cover;
   width: 100%;
   min-height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
 }
 
+.container {
+  margin-top: 150px;
+  
+}
 
   
 

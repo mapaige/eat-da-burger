@@ -15,7 +15,7 @@ selectAll:function(cbController){
 
 updateOne: function(objColVals,condition,cbController) {
   orm.updateOne ("burgers", objColVals, condition, function(res){
-    cbController(result);
+    cbController(res);
   });
 }
 

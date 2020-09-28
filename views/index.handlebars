@@ -1,42 +1,44 @@
-<div class="container" >
-  <div class="row" class="absolute" id="burgers" class="col-3 col-md-3 col-sm-12">
-    <div class=" col-4 col-md-4 col-sm-12" id="addburger">
-      <form action="">
-        <input type="text" name="burger_name">
-        <button id="addBurger"  data-id="{{id}}" data>Add Burger</button>
-      </form>
+<div class="container" class="text-center ">
+  <div class="row row-col-4 bg-white text-warning " id="burgers">
+    <div class="col ">
+      <input type="text" id="newBurger" name="burger_name"> <button class="addBurger text-warning" data-id="{{id}}">Add
+        Burger</button>
     </div>
-  </div>
 
 
-  <div class="row" id="burgerDevoured" class="col-3 col-md-3 col-sm-12">
-    <div class="col-12 col-md-12 col-sm-6" id="burgerDevoured">
-      <ul>
-        {{#each burgerData }}
-        {{#unless devoured}}
-        <li>
-          <p>{{burger_name}} <button class="devouredBtn"> devoured</button></p>
-        </li>
-        {{/unless}}
-        {{/each}}
-      </ul>
+
+
+
+
+  
+        <div class="col" id="burgerDevoured">
+          <h4>Burgers to Devour!</h4>
+          <ul class="list-unstyled">
+            {{#each burgerData}}
+            {{#unless devoured}}
+            <li>
+              <p>{{burger_name}} <button data-id={{id}} class="devouredBtn text-warning">Devoured</button></p>
+            </li>
+            {{/unless}}
+            {{/each}}
+          </ul>
+        </div>
+     
+
+
+
+     
+        <div class="col">
+          <ul class="list-unstyled">
+            {{#each burgerData}}
+            {{#if devoured}}
+            <li>
+              <p>{{burger_name}} </p>
+            </li>
+            {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+    
     </div>
-  </div>
-
-
-  <div class="row" class="col-3 col-md-3 col-sm-12">
-    <div class="col-12 col-md-12 col-sm-6">
-      <ul>
-        {{#each burgerData }}
-        {{#if devoured}}
-        <li>
-          <p>{{burger_name}} </p>
-        </li>
-        {{/if}}
-        {{/each}}
-      </ul>
-    </div
-  </div>
-
-
 </div>
