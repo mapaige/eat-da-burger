@@ -10,4 +10,8 @@
  This application has been deployed on Heroku. Please click link below to experience Eat Da Burger app! 
 
 
- <img src="eat-git.jpg">
+ <img src="public\images\eat-git.jpg">
+
+ ## Github Link
+
+
