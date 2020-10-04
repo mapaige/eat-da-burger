@@ -13,5 +13,9 @@
  <img src="public\images\eat-git.jpg">
 
  ## Github Link
+https://github.com/mapaige/eat-da-burger
 
+## Live Deployed version 
+
+https://rocky-cove-83667.herokuapp.com/
 
